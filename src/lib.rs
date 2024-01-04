@@ -1,10 +1,10 @@
 pub static INPUT_STR: &str = include_str!("input.txt");
 #[derive(Debug)]
-pub struct {{project-name | camelcase}} {}
+pub struct {{class_name}} {}
 
-impl {{project-name | camelcase}} {
+impl {{class_name}} {
     pub fn new(input: &str) -> Option<Self> {
-        Some({{project-name | camelcase}}{})
+        Some({{class_name}}{})
     }
 
     pub fn process_part_01(&self)->i32{
@@ -16,7 +16,7 @@ impl {{project-name | camelcase}} {
     }
 }
 
-impl Iterator for {{project-name | camelcase}} {
+impl Iterator for {{class_name}} {
     type Item = ();
 
     fn next(&mut self) -> Option<Self::Item> {
@@ -32,19 +32,19 @@ mod tests {
 
     #[test]
     fn test_part01() {
-        if let Some(mut aoc_day) = {{project-name | camelcase}}::new(TEST_PART1_STR) {
+        if let Some(mut aoc_day) = {{class_name}}::new(TEST_PART1_STR) {
             assert_eq!(aoc_day.process_part_01(), 999)
         }
     }
     #[test]
     fn test_part02() {
-        if let Some(mut aoc_day) = {{project-name | camelcase}}::new(TEST_PART2_STR) {
+        if let Some(mut aoc_day) = {{class_name}}::new(TEST_PART2_STR) {
             assert_eq!(aoc_day.process_part_02(), 999)
         }
     }
     #[test]
     fn test_part01_final() {
-        if let Some(mut aoc_day) = {{project-name | camelcase}}::new(INPUT_STR) {
+        if let Some(mut aoc_day) = {{class_name}}::new(INPUT_STR) {
             let result = aoc_day.process_part_01();
             println!("Final Result Part01: {result}");
             assert_eq!(result, 999)
@@ -53,7 +53,7 @@ mod tests {
 
     #[test]
     fn test_part02_final() {
-        if let Some(mut aoc_day) = {{project-name | camelcase}}::new(INPUT_STR) {
+        if let Some(mut aoc_day) = {{class_name}}::new(INPUT_STR) {
             let result = aoc_day.process_part_02();
             println!("Final Result Part02: {result}");
             assert_eq!(result, 999)
