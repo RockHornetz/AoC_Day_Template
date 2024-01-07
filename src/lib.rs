@@ -1,10 +1,12 @@
 pub static INPUT_STR: &str = include_str!("input.txt");
 #[derive(Debug)]
-pub struct {{class_name}} {}
+pub struct {{class_name}} {
+    pub input:&'static str,
+}
 
 impl {{class_name}} {
-    pub fn new(input: &str) -> Option<Self> {
-        Some({{class_name}}{})
+    pub fn new(input: &'static str) -> Option<Self> {
+        Some({{class_name}}{input})
     }
 
     pub fn process_part_01(&self)->i32{
