@@ -28,7 +28,7 @@ impl Iterator for {{class_name}} {
 
 #[cfg(test)]
 mod tests {
-    use super::{{{class_name}} as AocDay, INPUT_STR};
+    use super::{ {{class_name}} as AocDay, INPUT_STR};
     use _common::anyhow;
     use _common::anyhow::Context;
     
