@@ -5,8 +5,19 @@ edition = "2021"
 authors.workspace = true
 description.workspace = true
 [lib]
+bench=true
 path = "src/{{project-name}}.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 _common = { version = "0.1.0", path = "../_common" }
+
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[[bench]]
+bench=true
+path="src/{{project-name}}_bench.rs"
+name = "{{project-name}}_bench"
+harness = false

@@ -28,7 +28,7 @@ impl Iterator for {{class_name}} {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use super::{{{class_name}} as AocDay, INPUT_STR};
     use _common::anyhow;
     use _common::anyhow::Context;
     
@@ -37,13 +37,13 @@ mod tests {
 
     #[test]
     fn test_part_01() -> anyhow::Result<()> {
-        let mut aoc_day = {{class_name}}::new(TEST_PART_01_STR).context("Couldn't create")?;
+        let mut aoc_day = AocDay::new(TEST_PART_01_STR).context("Couldn't create")?;
         Ok(assert_eq!(aoc_day.process_part_01(), 999))
     }
 
     #[test]
     fn test_part_01_final() -> anyhow::Result<()> {
-        let mut aoc_day = {{class_name}}::new(INPUT_STR).context("Couldn't create")?;
+        let mut aoc_day = AocDay::new(INPUT_STR).context("Couldn't create")?;
         let result = aoc_day.process_part_01();
         println!("Final Result Part01: {result}");
         Ok(assert_eq!(result, 999))
@@ -51,13 +51,13 @@ mod tests {
 
     #[test]
     fn test_part_02() -> anyhow::Result<()> {
-        let mut aoc_day = {{class_name}}::new(TEST_PART_02_STR).context("Couldn't create")?;
+        let mut aoc_day = AocDay::new(TEST_PART_02_STR).context("Couldn't create")?;
         Ok(assert_eq!(aoc_day.process_part_02(), 999))
     }
 
     #[test]
     fn test_part_02_final() -> anyhow::Result<()> {
-        let mut aoc_day = {{class_name}}::new(INPUT_STR).context("Couldn't create")?;
+        let mut aoc_day = AocDay::new(INPUT_STR).context("Couldn't create")?;
         let result = aoc_day.process_part_02();
         println!("Final Result Part02: {result}");
         Ok(assert_eq!(result, 999))
